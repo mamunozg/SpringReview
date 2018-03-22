@@ -33,7 +33,8 @@
 		<hibernate.version>4.3.6.Final</hibernate.version>
 		<hibernate.validator>4.3.2.Final</hibernate.validator>
 		<jstl>1.2</jstl>
-		<org.springframework.security>4.2.4.RELEASE</org.springframework.security>
+		<org.springframework.security>4.2.4.RELEASE</org.springframework.security>		
+		<com.fasterxml.jackson>2.9.4</com.fasterxml.jackson>
 	</properties>
 
 
@@ -159,6 +160,35 @@
 			<version>${org.springframework.security}</version>
 		</dependency>
 
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.codehaus.jackson</groupId> -->
+		<!-- <artifactId>jackson-core-asl</artifactId> -->
+		<!-- <version>${jackson.core.asl}</version> -->
+		<!-- </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.codehaus.jackson</groupId> -->
+		<!-- <artifactId>jackson-mapper-asl</artifactId> -->
+		<!-- <version>${jackson.core.asl}</version> -->
+		<!-- </dependency> -->
 
 
 	</dependencies>

@@ -34,6 +34,7 @@
 		<hibernate.validator>4.3.2.Final</hibernate.validator>
 		<jstl>1.2</jstl>
 		<org.springframework.security>4.2.4.RELEASE</org.springframework.security>
+		<com.fasterxml.jackson>2.9.4</com.fasterxml.jackson>
 	</properties>
 
 
@@ -159,7 +160,19 @@
 			<version>${org.springframework.security}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
 
 	</dependencies>
 </project>

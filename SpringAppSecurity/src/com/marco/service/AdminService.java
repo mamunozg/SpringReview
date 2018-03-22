@@ -43,4 +43,8 @@ public class AdminService {
 		adminDao.delete(admin);
 	}
 
+	public List<Admin> findAllLikeName(String name) {
+		return adminDao.findByName(name);
+	}
+
 }

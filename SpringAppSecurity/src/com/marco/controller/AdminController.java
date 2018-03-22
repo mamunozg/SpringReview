@@ -1,6 +1,8 @@
 package com.marco.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.marco.pojo.Admin;
@@ -64,4 +68,19 @@ public class AdminController {
 		return "redirect:/admin";
 	}
 
+	@RequestMapping(value="/admin/json/search", produces="application/json")
+	@ResponseBody
+	public Map<String, Object> findAllLikeName(@RequestParam("term") String name) {
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		List<Admin> admins = adminService.findAllLikeName(name);
+		
+		for(int i=0;i<admins.size();i++) {
+			Admin admin = admins.get(i);
+			map.put("name"+ i, admin.getIdAdmin() + " " + admin.getName());
+		}
+		
+		System.out.println(map.toString());
+		return map;		
+	}
 }
