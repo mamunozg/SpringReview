@@ -19,6 +19,9 @@
 </script>
 </head>
 <body>
+	
+	<c:import url="/WEB-INF/views/menu.jsp"></c:import>
+
 	<h1>admin.jsp</h1>
 	
 <%-- 	Atributos del model: <c:out value="${msj}" /> <br/> --%>
