@@ -21,9 +21,9 @@ public class IndexController {
 	public String showAbout(SessionStatus sessionStatus) throws Exception {
 		sessionStatus.setComplete();
 		
-		if(true) {
-			throw new Exception();
-		}
+//		if(true) {
+//			throw new Exception();
+//		}
 		
 		return "about";
 	}
