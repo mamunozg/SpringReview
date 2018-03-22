@@ -37,15 +37,23 @@
 <%-- 		</c:if> --%>
 		<tr>
 			<td>User</td>
-			<td><sf:input path="user" type="text" /></td>
+			<td>
+				<sf:input path="user" type="text" />
+				<sf:errors path="user" cssStyle="color:red" />
+			</td>
 		</tr>
 		<tr>
 			<td>Password</td>
-			<td><sf:input path="password" type="text" /></td>
+				<td><sf:input path="password" type="text" />
+				<sf:errors path="password" cssStyle="color:red" />
+			</td>
 		</tr>
 		<tr>
 			<td>Permission</td>
-			<td><sf:input path="permission" type="text" /></td>
+			<td>
+				<sf:input path="permission" type="text" />
+				<sf:errors path="permission" cssStyle="color:red" />
+			</td>			
 		</tr>
 		<tr>
 			<td></td>

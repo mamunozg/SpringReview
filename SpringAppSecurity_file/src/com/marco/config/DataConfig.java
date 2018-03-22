@@ -55,6 +55,9 @@ public class DataConfig {
 			{
 				setProperty("hibernate.show_sql", "true");
 				setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+				setProperty("javax.persistence.validation.group.pre-persist", "com.marco.pojo.valid.PersistenceGroup");
+				setProperty("javax.persistence.validation.group.pre-update", "com.marco.pojo.valid.PersistenceGroup");
+				setProperty("javax.persistence.validation.group.pre-remove", "com.marco.pojo.valid.PersistenceGroup");
 			}
 		};
 	}

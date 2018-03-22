@@ -18,8 +18,13 @@ public class IndexController {
 	
 	
 	@RequestMapping("/about")
-	public String showAbout(SessionStatus sessionStatus) {
+	public String showAbout(SessionStatus sessionStatus) throws Exception {
 		sessionStatus.setComplete();
+		
+		if(true) {
+			throw new Exception();
+		}
+		
 		return "about";
 	}
 	

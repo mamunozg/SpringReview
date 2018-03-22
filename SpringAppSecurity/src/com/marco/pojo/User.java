@@ -5,7 +5,13 @@ import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Persistence;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
+import com.marco.pojo.valid.SpringFormGroup;
 
 @Entity
 @Table(name = "user")
@@ -17,9 +23,19 @@ public class User {
 	@GeneratedValue
 	private int iduser;
 
+	@NotEmpty(message=Constants.NOT_EMPTY, groups= {Persistence.class, SpringFormGroup.class})
 	private String user;
+	
+	
+	@NotEmpty(message=Constants.NOT_EMPTY, groups= {Persistence.class, SpringFormGroup.class})
+	@Size(min=3, max=15, message=Constants.SIZE, groups= {SpringFormGroup.class})
 	private String password;
+	
+	
+	@NotEmpty(message=Constants.NOT_EMPTY, groups= {Persistence.class, SpringFormGroup.class})
 	private String permission;
+	
+	
 	private Timestamp creationDate;
 
 	public int getIduser() {
